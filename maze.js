@@ -14,8 +14,8 @@ const multiline =
 *.******...**
 *....********`
 
+//============================== Génération du terrain ========================//
 const allLabyrinthe = document.createElement('div')
-//allLabyrinthe.textContent= multiline
 allLabyrinthe.className = "allLabyrinthe"
 main.appendChild(allLabyrinthe)
 
@@ -47,11 +47,11 @@ for (let i = 0; i < multiline.length; i++) {
         start.id = i // sert à attribué un id (un numéro) à case start
         allLabyrinthe.appendChild(start)
 
-        start.appendChild(player)//voir ligne(22-23)
+        start.appendChild(player) //voir ligne(22-23)
 
     } else if (multiline[i].split('') == 'T') {
         const arriver = document.createElement('div')
-        arriver.className = "arriver" 
+        arriver.className = "arriver"
         arriver.id = i // sert à attribué un id (un numéro) à case start
         allLabyrinthe.appendChild(arriver)
 
@@ -59,14 +59,14 @@ for (let i = 0; i < multiline.length; i++) {
     }
 }
 
+//============================== Direction flèche ========================//
+
 let playerPosition = 15
 
 // "ArrowUp" = button flèche du haut du clavier ... ect
-
 document.body.addEventListener('keyup', function (e) {
 
-    if ( playerPosition != 26 ) {
-
+    if (playerPosition != 26) {
         switch (e.key) {
             case "ArrowUp":
                 decalTop();
@@ -87,18 +87,23 @@ document.body.addEventListener('keyup', function (e) {
             default:
                 break;
         }
+
     } else {
 
-        alert("Vous avez trouver le trésor");
-        console.log("Console: Vous avez trouver le trésor");
+        const main = document.querySelector('main');
+        document.querySelector('main').innerHTML = "";
+        main.innerHTML = "<video autoplay muted loop><source src='img/ognion.mp4' type='video/mp4' /></video>" // 'Trophy.mp4' 
+
     }
 })
+
+//============================== Function direction ========================//
 
 function decalTop() {
     let play = playerPosition - 14 //chelou
     //console.log(play);
-    if (multiline[play].split('') != '*') {
-        //console.log('chu ds le if et je bouge en haut'); 
+    if (multiline[play] != '*') {
+        //console.log('chu ds le if et je bouge en haut');
         playerPosition = play
         document.getElementById(playerPosition).appendChild(player) //on recup l'id de la case puis on appel player dans sa nouvel case
 
@@ -112,8 +117,8 @@ function decalTop() {
 function decalDown() {
     let play = playerPosition + 14 //chelou
     //console.log(play);
-    if (multiline[play].split('') != '*') {
-        //console.log('chu ds le if et je bouge en bas'); 
+    if (multiline[play] != '*') {
+       // console.log('chu ds le if et je bouge en bas');
         playerPosition = play
         document.getElementById(playerPosition).appendChild(player)
 
@@ -126,8 +131,8 @@ function decalDown() {
 function decalRight() {
     let play = playerPosition + 1
     //console.log(play);
-    if (multiline[play].split('') != '*') {
-        //console.log('chu ds le if et je bouge à droite'); 
+    if (multiline[play] != '*') {
+        //console.log('chu ds le if et je bouge à droite');
         playerPosition = play
         document.getElementById(playerPosition).appendChild(player)
 
@@ -140,8 +145,8 @@ function decalRight() {
 function decalLeft() {
     let play = playerPosition - 1
     //console.log(play);
-    if (multiline[play].split('') != '*') {
-        //console.log('chu ds le if et je bouge à gauche'); 
+    if (multiline[play] != '*') {
+        //console.log('chu ds le if et je bouge à gauche');
         playerPosition = play
         document.getElementById(playerPosition).appendChild(player)
 

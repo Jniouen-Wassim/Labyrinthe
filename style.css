@@ -1,63 +1,73 @@
-body{
-    
+body {
+
     background-color: gray;
 }
 
 
-.allLabyrinthe{ /* ll regroupe l'ensemble du Labyrinthe et son contenue */
-display: flex;
-width: calc(13*40px);
-flex-wrap: wrap ;
-border: 2px solid black;
+.allLabyrinthe {
+    /* ll regroupe l'ensemble du Labyrinthe et son contenue */
+    display: flex;
+    width: calc(13*40px);
+    flex-wrap: wrap;
+    border: 2px solid black;
 
 }
 
 
-.etoile_mur{
-    
-    background: url(img/wall.jpg)no-repeat fixed;
-    background: cover;
-    /* background-color: black; */
-    width: 40px;
-    height: 40px;
-}
+.etoile_mur {
 
-.point_chemin{ 
-    
-    filter: brightness(40%); 
-    background: url(img/gazon.jpg)no-repeat fixed;
+    background: url(img/beau-mur.jpg)no-repeat fixed;
     background: cover;
     width: 40px;
     height: 40px;
 }
 
-.player{
-    
-    border-radius: 50%;
-    background-color: rgb(92, 47, 255);
+.point_chemin {
+
+
+    background: url(img/route-neuve.jpg)no-repeat fixed;
     width: 40px;
     height: 40px;
 }
 
-.tresor{
-    
-    background: url(img/etoile.png)no-repeat;
+.player {
+
+    background: url(img/cemil.jpg)no-repeat;
+    /*moi.jpg */
+    border-radius: 30%;
     width: 40px;
     height: 40px;
-} 
+}
 
-.start{
-    filter: brightness( 90%); 
-    background-color: green;
-    background: cover;
+.tresor {
+
+    background: url(img/onion2.jpg)no-repeat;
+    /*etoile.png*/
+    width: 40px;
+    height: 40px;
+}
+
+.start {
+
+    background: url(img/route-neuve.jpg)no-repeat fixed;
     width: 40px;
     height: 40px;
 
 }
 
-.arriver{
-    
-    background-color: rgb(43, 33, 7);
+.arriver {
+
+    filter: brightness(80%);
+    background: url(img/route-neuve.jpg)no-repeat fixed;
+    background-color: rgb(219, 177, 40, 0.7);
     width: 40px;
     height: 40px;
+}
+
+video {
+    border: 10px solid black;
+    box-shadow: 25px 25px 25px #000000;
+    height: 85vh;
+    margin-left: 9em;
+
 }
