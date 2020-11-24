@@ -55,7 +55,7 @@ for (let i = 0; i < multiline.length; i++) {
 
 let playerPosition = 15 
 
-// "ArrowUp" = button flèche du haut du clavier
+// "ArrowUp" = button flèche du haut du clavier ... ect
 document.body.addEventListener('keyup', function (e) {
 
     switch (e.key) {
