@@ -1,0 +1,60 @@
+body{
+    
+    background-color: gray;
+}
+
+
+.allLabyrinthe{ /* ll regroupe l'ensemble du Labyrinthe et son contenue */
+display: flex;
+width: calc(13*40px);
+flex-wrap: wrap ;
+border: 2px solid black;
+
+}
+
+
+.etoile_mur{
+    
+    background: url(img/wall.jpg)no-repeat fixed;
+    background: cover;
+    /* background-color: black; */
+    width: 40px;
+    height: 40px;
+}
+
+.point_chemin{ 
+    
+    filter: brightness( 40%); 
+    background: url(img/gazon.jpg)no-repeat fixed;
+    background: cover;
+    width: 40px;
+    height: 40px;
+}
+
+.player{
+    
+    font-size: 20%;
+    background: cover;
+    border-radius: 90%;
+    background-color: rgb(92, 47, 255);
+    padding: auto;
+    width: 40px;
+    height: 40px;
+}
+
+
+.start{
+    filter: brightness( 90%); 
+    background-color: green;
+    background: cover;
+    width: 40px;
+    height: 40px;
+
+}
+
+
+.arriver{
+    background-color: rgb(158, 0, 0);
+    width: 40px;
+    height: 40px;
+}
