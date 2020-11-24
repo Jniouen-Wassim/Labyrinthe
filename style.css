@@ -24,7 +24,7 @@ border: 2px solid black;
 
 .point_chemin{ 
     
-    filter: brightness( 40%); 
+    filter: brightness(40%); 
     background: url(img/gazon.jpg)no-repeat fixed;
     background: cover;
     width: 40px;
@@ -33,15 +33,18 @@ border: 2px solid black;
 
 .player{
     
-    font-size: 20%;
-    background: cover;
-    border-radius: 90%;
+    border-radius: 50%;
     background-color: rgb(92, 47, 255);
-    padding: auto;
     width: 40px;
     height: 40px;
 }
 
+.tresor{
+    
+    background: url(img/etoile.png)no-repeat;
+    width: 40px;
+    height: 40px;
+} 
 
 .start{
     filter: brightness( 90%); 
@@ -52,9 +55,9 @@ border: 2px solid black;
 
 }
 
-
 .arriver{
-    background-color: rgb(158, 0, 0);
+    
+    background-color: rgb(43, 33, 7);
     width: 40px;
     height: 40px;
 }

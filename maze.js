@@ -22,6 +22,9 @@ main.appendChild(allLabyrinthe)
 const player = document.createElement('div')
 player.className = 'player'
 
+const tresor = document.createElement('div')
+tresor.className = 'tresor'
+
 
 for (let i = 0; i < multiline.length; i++) {
 
@@ -43,40 +46,51 @@ for (let i = 0; i < multiline.length; i++) {
         start.className = "start"
         start.id = i // sert à attribué un id (un numéro) à case start
         allLabyrinthe.appendChild(start)
-        start.appendChild(player)
+
+        start.appendChild(player)//voir ligne(22-23)
 
     } else if (multiline[i].split('') == 'T') {
         const arriver = document.createElement('div')
-        arriver.className = "arriver"
+        arriver.className = "arriver" 
         arriver.id = i // sert à attribué un id (un numéro) à case start
         allLabyrinthe.appendChild(arriver)
+
+        arriver.appendChild(tresor) //voir ligne(25-26)
     }
 }
 
-let playerPosition = 15 
+let playerPosition = 15
 
 // "ArrowUp" = button flèche du haut du clavier ... ect
+
 document.body.addEventListener('keyup', function (e) {
 
-    switch (e.key) {
-        case "ArrowUp":
-            decalTop();
-            break;
+    if ( playerPosition != 26 ) {
 
-        case "ArrowDown":
-            decalDown();
-            break;
+        switch (e.key) {
+            case "ArrowUp":
+                decalTop();
+                break;
 
-        case "ArrowRight":
-            decalRight();
-            break;
+            case "ArrowDown":
+                decalDown();
+                break;
 
-        case "ArrowLeft":
-            decalLeft();
-            break;
+            case "ArrowRight":
+                decalRight();
+                break;
 
-        default:
-            break;
+            case "ArrowLeft":
+                decalLeft();
+                break;
+
+            default:
+                break;
+        }
+    } else {
+
+        alert("Vous avez trouver le trésor");
+        console.log("Console: Vous avez trouver le trésor");
     }
 })
 
@@ -89,7 +103,7 @@ function decalTop() {
         document.getElementById(playerPosition).appendChild(player) //on recup l'id de la case puis on appel player dans sa nouvel case
 
         //console.log(document.getElementById(play).appendChild(player))
-        
+
     } else {
         console.log('il y a un mur');
     }
@@ -101,7 +115,7 @@ function decalDown() {
     if (multiline[play].split('') != '*') {
         //console.log('chu ds le if et je bouge en bas'); 
         playerPosition = play
-        document.getElementById(playerPosition).appendChild(player) 
+        document.getElementById(playerPosition).appendChild(player)
 
         //console.log(document.getElementById(play).appendChild(player))
     } else {
