@@ -61,7 +61,7 @@ for (let i = 0; i < multiline.length; i++) {
 
 //============================== Direction flèche ========================//
 
-let playerPosition = 15
+let playerPosition = 15 ;
 
 // "ArrowUp" = button flèche du haut du clavier ... ect
 document.body.addEventListener('keyup', function (e) {
