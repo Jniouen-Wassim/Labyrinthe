@@ -38,7 +38,7 @@
 
 ## Screenshots de mon projets :
 
-![ Screenshots 1 ](laby.png)
+![ Screenshots 1 ](img/laby.png)
 
 
 ### License
