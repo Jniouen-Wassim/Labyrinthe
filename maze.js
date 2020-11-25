@@ -91,8 +91,8 @@ document.body.addEventListener('keydown', function (e) {    //'keyup'
 
         const main = document.querySelector('main');
         document.querySelector('main').innerHTML = "";
-        main.innerHTML = " <div class='legendeFinJeu'> <img src='img/cemil.jpg'> <p> OH merci Wassim tu as retrouvé mon oignon !!!! Va rechercher les autres aussi et je donnerai ma trottinette électrique. </p> </div> <hr> <video autoplay muted loop><source src='img/ognion.mp4' type='video/mp4' /></video>" // Trophy.mp4' ognion.mp4' 
-        setTimeout(function(){ document.querySelector("body > main > video").style.display = location.reload() }, 8000);
+        main.innerHTML = " <div class='legendeFinJeu'> <img src='img/cemil2.jpg'> <p> OH merci Wassim tu as retrouvé mon oignon !!!! Va rechercher les autres aussi et je donnerai ma trottinette électrique comme récompense. </p> </div> <hr> <video autoplay muted loop><source src='img/ognion.mp4' type='video/mp4' /></video>" // Trophy.mp4' ognion.mp4' 
+       // setTimeout(function(){ document.querySelector("body > main > video").style.display = location.reload() }, 8000);
 
     }
 })

@@ -2,7 +2,6 @@ body {
     background-color: gray;
 }
 
-
 .allLabyrinthe {
     /* ll regroupe l'ensemble du Labyrinthe et son contenue */
     display: flex;
@@ -12,18 +11,19 @@ body {
 
 }
 
-
 .etoile_mur {
     background: url(img/beau-mur.jpg)no-repeat fixed;
     background: cover;
     width: 40px;
     height: 40px;
+
 }
 
 .point_chemin {
     background: url(img/route-neuve.jpg)no-repeat fixed;
     width: 40px;
     height: 40px;
+
 }
 
 .player {
@@ -31,12 +31,14 @@ body {
     border-radius: 30%;
     width: 40px;
     height: 40px;
+
 }
 
 .tresor {
     background: url(img/kisspng.png)no-repeat;
     width: 40px;
     height: 40px;
+
 }
 
 .start {
@@ -51,16 +53,25 @@ body {
     background-color: rgb(219, 177, 40, 0.7);
     width: 40px;
     height: 40px;
+
 }
 
 video {
     border: 10px solid black;
     box-shadow: 25px 25px 25px #000000;
+    margin-top: 1%;
     height: 60vh;
-    margin-left: 20em;
+    margin-left: 28em;
 
 }
 
 .legendeFinJeu{
     text-align: center;
+
+}
+
+img {
+margin-bottom: 1%;
+margin-top: 1%;
+
 }
