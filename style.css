@@ -1,14 +1,20 @@
 body {
-    background-color: gray;
+    background-image: repeating-linear-gradient(45deg, hsla(307,0%,65%,0.05) 0px, hsla(307,0%,65%,0.05) 1px,transparent 1px, transparent 11px,hsla(307,0%,65%,0.05) 11px, hsla(307,0%,65%,0.05) 12px,transparent 12px, transparent 32px),repeating-linear-gradient(135deg, hsla(307,0%,65%,0.05) 0px, hsla(307,0%,65%,0.05) 1px,transparent 1px, transparent 11px,hsla(307,0%,65%,0.05) 11px, hsla(307,0%,65%,0.05) 12px,transparent 12px, transparent 32px),repeating-linear-gradient(90deg, hsla(307,0%,65%,0.05) 0px, hsla(307,0%,65%,0.05) 1px,transparent 1px, transparent 11px,hsla(307,0%,65%,0.05) 11px, hsla(307,0%,65%,0.05) 12px,transparent 12px, transparent 32px),repeating-linear-gradient(0deg, hsla(307,0%,65%,0.05) 0px, hsla(307,0%,65%,0.05) 1px,transparent 1px, transparent 11px,hsla(307,0%,65%,0.05) 11px, hsla(307,0%,65%,0.05) 12px,transparent 12px, transparent 32px),linear-gradient(90deg, rgb(152, 152, 152),rgb(96, 96, 96));
 }
 
-.allLabyrinthe {
-    /* ll regroupe l'ensemble du Labyrinthe et son contenue */
+/* main{
+    display: flex;
+    justify-content: center ;
+    flex-wrap: wra
+} */
+
+.allLabyrinthe {/* ll regroupe l'ensemble du Labyrinthe et son contenue */
+    
     display: flex;
     width: calc(13*40px);
     flex-wrap: wrap;
     border: 2px solid black;
-
+    /* background: url(img/beau-mur.jpg)no-repeat fixed; */
 }
 
 .etoile_mur {
@@ -74,4 +80,11 @@ img {
 margin-bottom: 1%;
 margin-top: 1%;
 
+border-bottom-left-radius: 50%;
+border-top-right-radius: 50%;
+
+}
+
+p{
+    font-size: 20px;
 }
