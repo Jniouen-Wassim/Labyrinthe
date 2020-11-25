@@ -63,10 +63,10 @@ for (let i = 0; i < multiline.length; i++) {
 
 let playerPosition = 15 ;
 
-// "ArrowUp" = button flèche du haut du clavier ... ect
-document.body.addEventListener('keyup', function (e) {
+// "ArrowUp" = button flèche du haut du clavier ... ect      
+document.body.addEventListener('keydown', function (e) {    //'keyup'
 
-    if (playerPosition != 26) {
+    
         switch (e.key) {
             case "ArrowUp":
                 decalTop();
@@ -87,12 +87,12 @@ document.body.addEventListener('keyup', function (e) {
             default:
                 break;
         }
-
-    } else {
+        if (playerPosition == 26) {
 
         const main = document.querySelector('main');
         document.querySelector('main').innerHTML = "";
-        main.innerHTML = "<video autoplay muted loop><source src='img/ognion.mp4' type='video/mp4' /></video>" // 'Trophy.mp4' 
+        main.innerHTML = " <div class='legendeFinJeu'> <img src='img/cemil.jpg'> <p> OH merci Wassim tu as retrouvé mon oignon !!!! Va rechercher les autres aussi et je donnerai ma trottinette électrique. </p> </div> <hr> <video autoplay muted loop><source src='img/ognion.mp4' type='video/mp4' /></video>" // Trophy.mp4' ognion.mp4' 
+        setTimeout(function(){ document.querySelector("body > main > video").style.display = location.reload() }, 8000);
 
     }
 })
