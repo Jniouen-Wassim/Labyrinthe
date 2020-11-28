@@ -2,7 +2,8 @@ const main = document.querySelector('main');
 document.querySelector('main').innerHTML = "";
 
 const multiline =
-    `***********.*
+    `*************
+***********.*
 *S.....**.*.T
 *****.....*.*
 *****.***.*.*
@@ -12,7 +13,8 @@ const multiline =
 *****.*******
 *.........***
 *.******...**
-*....********`
+*....********
+*************`
 
 //============================== Génération du terrain ========================//
 const allLabyrinthe = document.createElement('div')
