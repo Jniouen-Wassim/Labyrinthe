@@ -16,6 +16,25 @@ const multiline =
 *....********
 *************`
 
+/* Ou alors Labyrinthe n2:
+
+const multiline =
+    `*************
+*****...***.*
+*S....***.*.T
+*****.....*.*
+*.***.***.*.*
+*.***.*****.*
+*.***.*****.*
+*...........*
+*****.*******
+*...........*
+*.*********.*
+*...*******.*
+*************`
+
+*/
+
 //============================== Génération du terrain ========================//
 const allLabyrinthe = document.createElement('div')
 allLabyrinthe.className = "allLabyrinthe"
@@ -63,7 +82,7 @@ for (let i = 0; i < multiline.length; i++) {
 
 //============================== Direction flèche ========================//
 
-let playerPosition = 15 ;
+let playerPosition = 29 ;
 
 // "ArrowUp" = button flèche du haut du clavier ... ect      
 document.body.addEventListener('keydown', function (e) {    //'keyup'
@@ -89,7 +108,7 @@ document.body.addEventListener('keydown', function (e) {    //'keyup'
             default:
                 break;
         }
-        if (playerPosition == 26) {
+        if (playerPosition == 40) {
 
         const main = document.querySelector('main');
         document.querySelector('main').innerHTML = "";
